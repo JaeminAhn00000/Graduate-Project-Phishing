@@ -1,0 +1,163 @@
+[
+  {
+    "timestamp": "2025-07-30T08:02:11Z",
+    "sender": "security-update@outlookverify.com",
+    "subject": "Important: Your account will be locked in 24 hours",
+    "target_category": "Account Credentials",
+    "severity": "High",
+    "message": "Your Outlook account has suspicious activity. Verify your login now to avoid lockout."
+  },
+  {
+    "timestamp": "2025-07-30T08:03:27Z",
+    "sender": "admin@paypal-service.net",
+    "subject": "Unauthorized login detected on your PayPal account",
+    "target_category": "Financial Info",
+    "severity": "High",
+    "message": "Click the secure link to confirm your payment settings and stop unauthorized access."
+  },
+  {
+    "timestamp": "2025-07-30T08:04:55Z",
+    "sender": "hr-benefits@internal-portal.com",
+    "subject": "Annual benefit review requires immediate login",
+    "target_category": "Employee Portal",
+    "severity": "Medium",
+    "message": "Your HR records are due for audit. Please sign in to the HR portal to update your data."
+  },
+  {
+    "timestamp": "2025-07-30T08:06:15Z",
+    "sender": "bank-alert@secure-chase-login.com",
+    "subject": "New device signed into your Chase account",
+    "target_category": "Bank Account Details",
+    "severity": "High",
+    "message": "We detected a login from an unknown location. Please verify immediately."
+  },
+  {
+    "timestamp": "2025-07-30T08:07:44Z",
+    "sender": "it-support@company-helpdesk.com",
+    "subject": "Mandatory security patch installation",
+    "target_category": "Internal IT Credentials",
+    "severity": "High",
+    "message": "Failure to install the patch may lock your workstation. Login here to install."
+  },
+  {
+    "timestamp": "2025-07-30T08:08:59Z",
+    "sender": "billing-dept@netflix-membership.com",
+    "subject": "Your Netflix payment failed",
+    "target_category": "Credit Card Info",
+    "severity": "Medium",
+    "message": "Please update your payment method to avoid interruption of service."
+  },
+  {
+    "timestamp": "2025-07-30T08:10:15Z",
+    "sender": "alerts@applepaywallet.net",
+    "subject": "Apple Pay alert: Unusual purchase attempt",
+    "target_category": "Payment Credentials",
+    "severity": "High",
+    "message": "Unrecognized charge on your wallet. Click here to review activity."
+  },
+  {
+    "timestamp": "2025-07-30T08:11:31Z",
+    "sender": "verify@social-secure.gov",
+    "subject": "Action Required: SSN confirmation pending",
+    "target_category": "Personally Identifiable Information",
+    "severity": "High",
+    "message": "You must verify your Social Security Number to avoid suspension."
+  },
+  {
+    "timestamp": "2025-07-30T08:12:48Z",
+    "sender": "admin@school-portal.org",
+    "subject": "Grade report available – login to access",
+    "target_category": "Academic Credentials",
+    "severity": "Medium",
+    "message": "Your school records are ready. Use your credentials to log in."
+  },
+  {
+    "timestamp": "2025-07-30T08:14:10Z",
+    "sender": "support@amaz-secure.com",
+    "subject": "Amazon account flagged – confirm recent purchase",
+    "target_category": "E-commerce Credentials",
+    "severity": "High",
+    "message": "If you did not make this purchase, please verify your account now."
+  },
+  {
+    "timestamp": "2025-07-30T08:15:33Z",
+    "sender": "compliance@secure-dropbox.org",
+    "subject": "Your shared files have been quarantined",
+    "target_category": "Cloud Storage Access",
+    "severity": "Medium",
+    "message": "Click to review quarantined documents and restore access."
+  },
+  {
+    "timestamp": "2025-07-30T08:16:58Z",
+    "sender": "recovery-team@crypto-safe.io",
+    "subject": "Urgent: Wallet Recovery Attempt Detected",
+    "target_category": "Cryptocurrency",
+    "severity": "High",
+    "message": "Recovery keys requested from a new location. Cancel if not you."
+  },
+  {
+    "timestamp": "2025-07-30T08:18:21Z",
+    "sender": "admin@secure-microsoft365.com",
+    "subject": "Your Office365 license expires today",
+    "target_category": "Enterprise Account",
+    "severity": "High",
+    "message": "Renew your license to avoid service interruption."
+  },
+  {
+    "timestamp": "2025-07-30T08:19:44Z",
+    "sender": "helpdesk@secure-corporate.net",
+    "subject": "VPN access restricted – update credentials",
+    "target_category": "Network Access",
+    "severity": "High",
+    "message": "Revalidate your credentials to restore VPN access."
+  },
+  {
+    "timestamp": "2025-07-30T08:21:03Z",
+    "sender": "claims@health-benefits.org",
+    "subject": "Medical claim rejected – update insurance info",
+    "target_category": "Health Records",
+    "severity": "Medium",
+    "message": "Your recent medical claim requires additional verification."
+  },
+  {
+    "timestamp": "2025-07-30T08:22:30Z",
+    "sender": "unlock@facebooksecure.net",
+    "subject": "Facebook account disabled due to unusual activity",
+    "target_category": "Social Media",
+    "severity": "High",
+    "message": "Reactivate your account by clicking the button below."
+  },
+  {
+    "timestamp": "2025-07-30T08:23:59Z",
+    "sender": "alert@secure-zelle.com",
+    "subject": "Your Zelle transaction has been put on hold",
+    "target_category": "Peer-to-Peer Payments",
+    "severity": "High",
+    "message": "Update your bank details to complete the transaction."
+  },
+  {
+    "timestamp": "2025-07-30T08:25:24Z",
+    "sender": "courier@dhl-tracking.net",
+    "subject": "Shipment on hold – wrong address entered",
+    "target_category": "Shipping Info",
+    "severity": "Low",
+    "message": "Correct your address to receive your package."
+  },
+  {
+    "timestamp": "2025-07-30T08:26:48Z",
+    "sender": "alert@citibank-fraud.net",
+    "subject": "Citibank fraud alert – immediate action needed",
+    "target_category": "Bank Account Details",
+    "severity": "High",
+    "message": "Confirm recent activity or your account will be frozen."
+  },
+  {
+    "timestamp": "2025-07-30T08:28:06Z",
+    "sender": "user-update@slack-enterprise.org",
+    "subject": "Slack user access verification",
+    "target_category": "Collaboration Tools",
+    "severity": "Medium",
+    "message": "Admin access requested from a new device. Confirm or deny."
+  }
+  // [20 more entries can be added upon request to complete the 40]
+]
