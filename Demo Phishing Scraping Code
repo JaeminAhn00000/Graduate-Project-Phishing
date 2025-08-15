@@ -1,0 +1,91 @@
+import json
+from datetime import datetime
+from telethon import TelegramClient
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.tl.types import Message
+import asyncio
+
+api_id = '123456789'
+api_hash = 'abce234nsdfasdf234'
+client = TelegramClient('anon', api_id, api_hash)
+
+CATEGORY_KEYWORDS = {
+    "account": "Account Credentials",
+    "paypal": "Financial Info",
+    "hr": "Employee Portal",
+    "chase": "Bank Account Details",
+    "patch": "Internal IT Credentials",
+    "netflix": "Credit Card Info",
+    "apple": "Payment Credentials",
+    "ssn": "Personally Identifiable Information",
+    "grade": "Academic Credentials",
+    "amazon": "E-commerce Credentials",
+    "dropbox": "Cloud Storage Access",
+    "wallet": "Cryptocurrency",
+    "microsoft365": "Enterprise Account",
+    "vpn": "Network Access",
+    "insurance": "Health Records",
+    "facebook": "Social Media",
+    "zelle": "Peer-to-Peer Payments",
+    "dhl": "Shipping Info",
+    "citibank": "Bank Account Details",
+    "slack": "Collaboration Tools"
+}
+
+SEVERITY_KEYWORDS = {
+    "locked": "High",
+    "verify": "High",
+    "urgent": "High",
+    "alert": "High",
+    "update": "Medium",
+    "review": "Medium",
+    "incorrect": "Low"
+}
+
+def classify_category(text):
+    for keyword, category in CATEGORY_KEYWORDS.items():
+        if keyword.lower() in text.lower():
+            return category
+    return "Unknown"
+
+def classify_severity(text):
+    for keyword, severity in SEVERITY_KEYWORDS.items():
+        if keyword.lower() in text.lower():
+            return severity
+    return "Low"
+
+async def join_channel(channel_link):
+    try:
+        await client(JoinChannelRequest(channel_link))
+        print(f"Joined channel: {channel_link}")
+    except Exception as e:
+        print(f"Failed to join {channel_link}: {e}")
+
+async def scrape_messages(channel_username, limit=100):
+    results = []
+    async for message in client.iter_messages(channel_username, limit=limit):
+        if isinstance(message, Message) and message.text:
+            data = {
+                "timestamp": message.date.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "sender": f"user{message.sender_id or '000'}@telegram.com",
+                "subject": message.text.split('\n')[0][:100],
+                "target_category": classify_category(message.text),
+                "severity": classify_severity(message.text),
+                "message": message.text
+            }
+            results.append(data)
+    return results
+
+def save_to_json(data, filename="scraped_phishing_data.json"):
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"Successfully saved {len(data)} messages to '{filename}'.")
+
+async def main():
+    channel_link = 'https://t.me/somepublicchannel'  # Replace with actual link
+    await join_channel(channel_link)
+    messages = await scrape_messages('somepublicchannel')  # Replace with actual channel username
+    save_to_json(messages)
+
+with client:
+    client.loop.run_until_complete(main())
